@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Editar Cliente</title>
+
+    <!-- Pico CSS Styles-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <nav class="container-fluid">
+      <ul>
+        <li><strong>Projects</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#">Editar Cliente</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <h1>Cadastro de Clientes</h1>
+      <form action="" method="post" th:object="${clientForm}">
+        <label for=""
+          >Nome*
+          <input required type="text" name="" id="" th:field="*{name}" />
+        </label>
+        <label for=""
+          >E-mail*
+          <input required type="email" name="" id="" th:field="*{email}" />
+        </label>
+        <label for=""
+          >Telefone*
+          <input
+            required
+            placeholder="(11) 11111-2222"
+            type="text"
+            name=""
+            id=""
+            pattern="^\(\d{2}) \d{5}-\d{4}$"
+            th:field="*{phone}"
+          />
+        </label>
+        <button type="submit">Salvar</button>
+      </form>
+    </main>
+  </body>
+</html>
